@@ -1,0 +1,83 @@
+html{
+  font-family:Consola;
+  font-size: 18px;
+}
+body {
+  background-color: black;
+  color:#c5bebe;
+  font-family: "Consolas", monospace;
+  margin: 0;
+  padding: 10px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#terminal {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 10px;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  background-color: white;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+.input-line {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.input-line span {
+  color: rgb(210, 207, 207);
+  margin-right: 5px;
+}
+
+.input-line input {
+  background: transparent;
+  border: none;
+  color:  rgb(210, 207, 207);
+  font-family: inherit;
+  font-size: 17px;
+  flex: 1;
+  outline: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: #444;
+}
+
+/* Startup style */
+.startup {
+  color: #ccc;
+  line-height: 1.6;
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.line {
+  white-space: pre-wrap;
+  animation: appear 0.05s linear;
+}
+
+@keyframes appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
